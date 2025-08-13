@@ -6,14 +6,19 @@ import { CssBaseline } from '@mui/material';
 import App from './App';
 import { theme } from './theme';
 import './index.css';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ThemeProvider>
-  </StrictMode>
+    <StrictMode>
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <BrowserRouter>
+                <QueryClientProvider client={queryClient}>
+                    <App />
+                </QueryClientProvider>
+            </BrowserRouter>
+        </ThemeProvider>
+    </StrictMode>
 );
