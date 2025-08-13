@@ -1,7 +1,7 @@
 import { Box, Container, Typography, Card, CardContent, Button, Grid, Paper } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Chat, People, Mic, LocalHospital } from '@mui/icons-material';
-import { useSession } from '../lib/session';
+import { useSession } from '../lib/api/authQueries';
 
 export function Home() {
     const { session } = useSession();

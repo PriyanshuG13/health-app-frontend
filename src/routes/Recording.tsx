@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import {
     Container,
     Typography,
@@ -13,7 +13,7 @@ import {
     Divider,
 } from '@mui/material';
 import { Mic, Stop, PlayArrow, Pause, Upload, Description, VolumeUp } from '@mui/icons-material';
-import { api } from '../lib/api';
+import { api } from '../lib/api/client';
 
 interface RecordingState {
     isRecording: boolean;

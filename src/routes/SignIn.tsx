@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Container, Typography, Box, Button, Paper, Alert } from '@mui/material';
 import { Microsoft, LocalHospital } from '@mui/icons-material';
-import { useSession } from '../lib/session';
+import { useSession } from '../lib/api/authQueries';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 export function SignIn() {
