@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     AppBar,
     Toolbar,
@@ -14,7 +13,8 @@ import {
 } from '@mui/material';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AccountCircle, ExitToApp, Menu as MenuIcon } from '@mui/icons-material';
-import { useSession } from '../lib/session';
+import { useSession } from '../lib/api/authQueries';
+import { useState } from 'react';
 
 interface GlobalTopBarProps {
     onMobileMenuToggle?: () => void;
@@ -27,7 +27,7 @@ export function GlobalTopBar({ onMobileMenuToggle }: GlobalTopBarProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
     const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);

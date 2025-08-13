@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import {
     Table,
     TableBody,
@@ -28,7 +28,7 @@ import {
     createColumnHelper,
     type SortingState,
 } from '@tanstack/react-table';
-import { api } from '../lib/api';
+import { api } from '../lib/api/client';
 
 interface Patient {
     id: string;

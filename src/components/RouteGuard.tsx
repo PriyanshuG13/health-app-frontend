@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { Box, CircularProgress, Typography } from '@mui/material';
-import { useSession } from '../lib/session';
+import { useSession } from '../lib/api/authQueries';
 
 interface RouteGuardProps {
     children: ReactNode;

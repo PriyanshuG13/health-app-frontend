@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import {
     Box,
     Card,
@@ -11,7 +11,7 @@ import {
     Alert,
 } from '@mui/material';
 import { Send, Person, SmartToy } from '@mui/icons-material';
-import { api } from '../lib/api';
+import { api } from '../lib/api/client';
 
 interface Message {
     id: string;
